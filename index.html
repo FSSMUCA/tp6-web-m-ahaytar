@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice Web - TP6</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Calculatrice Interactive</h1>
+        <p>Mini-Application Web</p>
+    </header>
+
+    <main>
+        <section class="calculator-section">
+            <h2>Effectuer un Calcul</h2>
+            
+            <form id="calculatorForm">
+                <div class="form-group">
+                    <label for="nombreA">Nombre A :</label>
+                    <input type="number" id="nombreA" name="nombreA" step="any" placeholder="Entrez le premier nombre">
+                </div>
+
+                <div class="form-group">
+                    <label for="nombreB">Nombre B :</label>
+                    <input type="number" id="nombreB" name="nombreB" step="any" placeholder="Entrez le deuxième nombre">
+                </div>
+
+                <div class="form-group">
+                    <label for="operation">Opération :</label>
+                    <select id="operation" name="operation">
+                        <option value="">-- Choisir une opération --</option>
+                        <option value="+">Addition (+)</option>
+                        <option value="-">Soustraction (−)</option>
+                        <option value="*">Multiplication (×)</option>
+                        <option value="/">Division (÷)</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-calculate">Calculer</button>
+            </form>
+
+            <div id="errorMessage" class="error-message"></div>
+            <div id="resultMessage" class="result-message"></div>
+        </section>
+
+        <section class="history-section">
+            <h2>📜 Historique des Opérations</h2>
+            <div id="historyContainer" class="history-container">
+                <p class="empty-history">Aucune opération effectuée pour le moment.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Ahaytar Mohamed</p>
+        <p><a href="info.php" target="_blank">Voir la page PHP d'informations</a></p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
